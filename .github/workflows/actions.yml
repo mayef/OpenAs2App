@@ -49,7 +49,7 @@ jobs:
       - name: Archive jars
         uses: actions/upload-artifact@v3
         with:
-          name: artifacts
+          name: artifacts-${{ matrix.java_version }}-${{ matrix.os }}
           path: |
             Server/dist/OpenAS2Server-*.zip
             Remote/dist/OpenAS2Remote-*.zip
